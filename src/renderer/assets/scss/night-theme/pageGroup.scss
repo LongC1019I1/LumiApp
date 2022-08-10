@@ -1,0 +1,224 @@
+$lumi-orange: #ee9723;
+$lumi-green: #26ac4a;
+$lumi-green-darker: #135625;
+$blue: #008aee;
+$blue-hover: #3890fc;
+$gray: #707070;
+$lumi-linear-gradient: linear-gradient(to right, $lumi-green, $lumi-green-darker);
+$lumi-radial-gradient: radial-gradient($lumi-green, $lumi-green-darker);
+
+$primary-color: #fff;
+$primary-color-hover: rgb(146, 146, 146);
+$active-color: $lumi-orange;
+$not-active-color: #a9a9a9;
+
+$contrast-color: #000;
+$background: #393933;
+$background-blur: rgba(57, 57, 51, 0.9);
+$background-darker: #201a1a;
+$background-lighter: #414141;
+$background-card: #52524c;
+$background-card-hover: $background-lighter;
+$background-brigness-lighter: rgba(255, 255, 255, 0.25);
+$background-brigness-darker: rgba(0, 0, 0, 0.25);
+$border-box-colapse: 1px 0 0 0 $gray, 0 1px 0 0 $gray, 1px 1px 0 0 $gray, 1px 0 0 0 $gray inset, 0 1px 0 0 $gray inset;
+
+.night-theme {
+  #group {
+    #groupList {
+      .menu-header {
+        & > div {
+          background-color: $gray;
+          color: $primary-color-hover;
+          padding: 0.5rem;
+          text-align: center;
+          &:first-child {
+            border-top-left-radius: 1.25rem;
+            border-bottom-left-radius: 1.25rem;
+          }
+          &:last-child {
+            border-top-right-radius: 1.25rem;
+            border-bottom-right-radius: 1.25rem;
+          }
+          &.active {
+            background-color: $background-darker;
+            color: $lumi-orange;
+          }
+        }
+      }
+      .buttonAddGroup {
+        background: $gray !important;
+        border: 1px $gray;
+        &:hover {
+          background-color: $background !important;
+          border: 1px solid $lumi-orange !important;
+          color: $lumi-orange;
+        }
+      }
+      h5 {
+        span {
+          color: $lumi-orange;
+        }
+      }
+      .group {
+        margin-bottom: 0px !important;
+        background-color: $background;
+        .tooltip-hover {
+          color: white;
+          background: gray !important;
+        }
+        &.active {
+          background-color: $background-darker;
+          .name {
+            color: $lumi-orange;
+          }
+        }
+      }
+    }
+    #groupNormal,
+    #groupLighting {
+      button {
+        background-color: $gray;
+        border: none;
+        &:hover {
+          background-color: $background-lighter;
+        }
+        &:disabled {
+          background-color: gray;
+        }
+      }
+      .card-header {
+        .right-box {
+          justify-content: flex-end;
+          .search {
+            .form-group {
+              input {
+                background-color: $gray;
+              }
+            }
+          }
+          .filter-device {
+            ul {
+              background: $background-darker;
+              border: 1px solid white;
+              a {
+                color: white;
+                border-bottom: 1px solid white;
+              }
+
+              a:last-child {
+                color: white;
+                border-bottom: none;
+              }
+
+              a:hover {
+                background: $background-brigness-darker;
+              }
+            }
+          }
+        }
+      }
+      .card-body {
+        #tableDevice {
+          background-color: $background-card;
+          th,
+          td {
+            border: none;
+            box-shadow: $border-box-colapse;
+          }
+          thead {
+            tr {
+              background-color: $gray;
+              th {
+                background-color: $gray;
+                border-color: $gray;
+              }
+            }
+          }
+          tbody {
+            tr {
+              &.selected {
+                background-color: $background-brigness-lighter;
+              }
+              td {
+                div {
+                  position: relative;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  margin: auto;
+                }
+                .check_device {
+                  border: 1px white solid;
+                  border-radius: 2px;
+                }
+                .icon-config {
+                  font-size: 45px;
+                }
+              }
+            }
+          }
+        }
+        .group-info-box {
+          background-color: $background-card;
+          box-shadow: $border-box-colapse;
+          .info {
+            input {
+              background-color: transparent;
+              color: $primary-color;
+            }
+          }
+        }
+        .dropdown {
+          .dropdown-menu {
+            background-color: $background-darker;
+            .dropdown-item {
+              color: $primary-color;
+              &:hover {
+                background-color: $background-brigness-darker;
+              }
+            }
+          }
+        }
+      }
+    }
+    .modal-list-device-lighting {
+      #tableDevice {
+        background-color: $background-card;
+        thead {
+          tr {
+            th {
+              background-color: $background-card;
+            }
+          }
+        }
+        tbody {
+          tr {
+            &.selected {
+              background-color: $background-brigness-lighter;
+            }
+            td {
+              div {
+                position: relative;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+              }
+              .check_device {
+                border: 1px white solid;
+                border-radius: 2px;
+              }
+              .icon-config {
+                font-size: 45px;
+              }
+              border: #737373 0.3px solid;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,285 @@
+$lumi-orange: #ee9723;
+$lumi-green: #26ac4a;
+$lumi-green-darker: #135625;
+$blue: #008aee;
+$blue-hover: #3890fc;
+$gray: #707070;
+$gray2: #5d656b;
+$gray3: #838b91;
+$gray4: #a9aeb2;
+$lumi-linear-gradient: linear-gradient(to right, $lumi-green, $lumi-green-darker);
+$lumi-radial-gradient: radial-gradient($lumi-green, $lumi-green-darker);
+
+$primary-color: #fff;
+$primary-color-hover: rgb(146, 146, 146);
+$active-color: $lumi-orange;
+$not-active-color: #a9a9a9;
+
+$contrast-color: #000;
+$background: #393933;
+$background-blur: rgba(57, 57, 51, 0.9);
+$background-darker: #201a1a;
+$background-lighter: #414141;
+$background-card: #52524c;
+$background-card-condfirm: $gray2;
+$background-card-hover: $background-lighter;
+$background-brigness-lighter: rgba(255, 255, 255, 0.15);
+$background-brigness-lighter2: rgba(255, 255, 255, 0.25);
+$background-brigness-darker: rgba(0, 0, 0, 0.25);
+$background-brigness-darker2: rgba(0, 0, 0, 0.4);
+
+.night-theme {
+    .dropdown {
+        .dropdown-menu {
+            background-color: $background-darker;
+            .dropdown-item {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: $primary-color;
+                &:hover,
+                &:focus {
+                    background-color: $background-brigness-darker;
+                }
+            }
+        }
+        &#userInfo,
+        &#language {
+            .dropdown-menu {
+                padding: 0px;
+                margin: 0px;
+                top: 3rem;
+                border-radius: 1rem;
+                border: 1px $not-active-color solid;
+                .dropdown-item {
+                    border-top: 1px $not-active-color solid;
+                    font-size: 1.125rem;
+                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                    width: 300px;
+                    &:nth-child(1) {
+                        border-top-right-radius: 1rem;
+                        border-top-left-radius: 1rem;
+                    }
+                    &:nth-last-child(1) {
+                        border-bottom-right-radius: 1rem;
+                        border-bottom-left-radius: 1rem;
+                    }
+                }
+            }
+        }
+        &#userInfo {
+            .user-title {
+                display: inline-flex;
+                max-width: 200px;
+                .front-title {
+                    font-size: 1.25rem;
+                    position: relative;
+                    top: 0.2rem;
+                }
+                .avata {
+                    border-radius: 50%;
+                    height: 40px;
+                    width: 40px;
+                    object-fit: cover;
+                }
+            }
+            .dropdown-item {
+                &.media,
+                &.first-el {
+                    border-top: none;
+                }
+                &.media:hover {
+                    background-color: transparent;
+                }
+                &.logout {
+                    color: $lumi-orange;
+                }
+                .avata {
+                    border-radius: 50%;
+                    height: 200%;
+                    width: 200%;
+                    object-fit: cover;
+                }
+                i {
+                    margin-left: 0.7rem;
+                    font-size: 1.7rem;
+                }
+                .media-body {
+                    div {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+        &#language {
+            right: 5rem;
+            img {
+                padding-right: 1rem;
+                position: relative;
+                top: 0.25rem;
+                height: 35px;
+                object-fit: cover;
+            }
+        }
+        &#notificationDropdown {
+            .dropdown-menu {
+                padding: 0px;
+                &:after {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    bottom: 100%;
+                    right: 15px;
+                    border-width: 0 6px 6px 6px;
+                    border-style: solid;
+                }
+
+                &:before {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    bottom: 100%;
+                    right: 13px;
+                    border-width: 0 8px 8px 8px;
+                    border-style: solid;
+                }
+                .dropdown-item {
+                    padding: 0.5rem;
+                    display: flex;
+                    align-items: center;
+                    border: none;
+                }
+            }
+        }
+        &#SelectFloor {
+            .dropdown-toggle {
+                z-index: 10;
+                border-radius: 20px !important;
+                height: 43px;
+                border: none;
+                text-align: left !important;
+                width: 100%;
+                text-transform: none;
+
+                .float-left {
+                    font-weight: 100;
+                }
+            }
+
+            .dropdown-menu {
+                width: 100% !important;
+                z-index: 9 !important;
+                position: relative !important;
+                top: -20px !important;
+                padding-top: 20px !important;
+                min-width: 100px;
+                height: auto;
+                overflow: auto;
+
+                a {
+                    color: white;
+                    border-bottom: 1px solid white;
+                }
+
+                a:last-child {
+                    color: white;
+                    border-bottom: none;
+                }
+            }
+        }
+        &#roomManagerHeaderMenu {
+            .dropdown-menu {
+                padding: 0px 0px;
+                border-radius: 0.5rem;
+                .dropdown-item {
+                    display: flex;
+                    align-items: center;
+
+                    &:nth-child(1) {
+                        border-top-right-radius: 0.5rem;
+                        border-top-left-radius: 0.5rem;
+                    }
+                    &:nth-last-child(1) {
+                        border-bottom-right-radius: 0.5rem;
+                        border-bottom-left-radius: 0.5rem;
+                    }
+                }
+            }
+        }
+        &.rule-info-dropdown,
+        &.camera-info-dropdown,
+        &.group-lighting-dropdown,
+        &.scene-icon-dropdown {
+            .dropdown-menu {
+                padding: 0 0.5rem;
+            }
+            &.dropdown-icon {
+                .dropdown-menu {
+                    padding: 0;
+                    max-height: 300px;
+                    overflow: auto;
+                    .dropdown-item {
+                        border: none;
+                        i {
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+        &.rule-timer-dropdown {
+            position: inherit;
+            width: 100%;
+            i {
+                font-size: 1.5rem;
+                margin: 0 1rem;
+            }
+            .dropdown-menu {
+                z-index: 2000;
+                width: 100%;
+                &.show {
+                    display: flex;
+                }
+                .dropdown-item {
+                    border: none;
+                    i {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+        &.floor-list-dropdown {
+            position: relative;
+            display: inline-block;
+            .dropdown-content {
+                background-color: $background-darker;
+                display: none;
+                position: absolute;
+                right: -1rem;
+                border-radius: 1rem;
+                min-width: 100px;
+                z-index: 1;
+                & > div {
+                    max-height: 250px;
+                }
+                .dropdown-item {
+                    color: $primary-color-hover;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                    &:hover {
+                        background-color: $background-brigness-darker;
+                        color: $primary-color;
+                    }
+                }
+            }
+            &:hover .dropdown-content {
+                display: block;
+            }
+        }
+    }
+}

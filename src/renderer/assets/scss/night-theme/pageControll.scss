@@ -1,0 +1,154 @@
+$lumi-orange: #ee9723;
+$lumi-green: #26ac4a;
+$lumi-green-darker: #135625;
+$blue: #008aee;
+$blue-hover: #3890fc;
+$gray: #707070;
+$lumi-linear-gradient: linear-gradient(to right, $lumi-green, $lumi-green-darker);
+$lumi-radial-gradient: radial-gradient($lumi-green, $lumi-green-darker);
+
+$primary-color: #fff;
+$primary-color-hover: rgb(146, 146, 146);
+$active-color: $lumi-orange;
+$not-active-color: #a9a9a9;
+
+$contrast-color: #000;
+$background: #393933;
+$background-blur: rgba(57, 57, 51, 0.9);
+$background-darker: #201a1a;
+$background-lighter: #414141;
+$background-card: #52524c;
+$background-card-hover: $background-lighter;
+$background-brigness-lighter: rgba(255, 255, 255, 0.25);
+$background-brigness-darker: rgba(0, 0, 0, 0.25);
+
+.night-theme {
+    #musicBox {
+        .music-manager {
+            i {
+                &:hover {
+                    color: $primary-color-hover;
+                }
+            }
+            .speacker-name {
+                color: $active-color;
+            }
+            .center-box {
+                .song-name {
+                    color: $active-color;
+                }
+            }
+        }
+        .music-player {
+            .music-player-button {
+                -content: space-between;
+                .content {
+                    i {
+                        &:hover {
+                            color: $primary-color-hover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #history {
+        background-color: $background-card;
+    }
+    #speakerList {
+        .speaker-box {
+            .speaker-item {
+                background-color: $background;
+                &.active {
+                    background-color: $background-lighter;
+                }
+            }
+        }
+    }
+    #speakerControll {
+        &.card,
+        .card-footer {
+            background-color: #5b5f60;
+        }
+        .card-header,
+        .card-body {
+            background-color: $background-card;
+        }
+        .speaker-controll {
+            .online-song-list {
+                .box-search {
+                    background-color: #5f5f59;
+                    input {
+                        background-color: #5f5f59;
+                        border: none;
+                        outline: none;
+                        color: $primary-color;
+                        &::placeholder {
+                            color: $not-active-color;
+                        }
+                    }
+                }
+            }
+            .offline-song-list,
+            .online-song-list .meta-list {
+                .no-song-box {
+                    span {
+                        color: $not-active-color;
+                    }
+                }
+                .song-item {
+                    background-color: $background-darker;
+                    &.active {
+                        color: $lumi-orange;
+                    }
+                }
+            }
+            .speaker-list {
+                .speaker-list-box {
+                    background-color: $background-darker;
+                    .speaker-box2 {
+                        .speaker-item {
+                            background-color: $background;
+                            &.active {
+                                background-color: $background-lighter;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #floorControll {
+        .card-header {
+            h5 {
+                span {
+                    &:not(.active):hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+        .room {
+            .switch {
+                background: $not-active-color;
+                &.active {
+                    background: $lumi-orange;
+                }
+            }
+        }
+    }
+    #ModaloftenUsedDevicesSetting {
+        .list-floor {
+            span {
+                color: $not-active-color;
+                &:not(.active):hover {
+                    color: $primary-color;
+                }
+                &.active {
+                    color: $active-color;
+                    border-bottom: 1px solid $active-color;
+                }
+            }
+        }
+    }
+}

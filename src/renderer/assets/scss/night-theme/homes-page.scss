@@ -1,0 +1,82 @@
+$lumi-orange: #ee9723;
+$lumi-green: #26ac4a;
+$lumi-green-darker: #135625;
+$blue: #008aee;
+$blue-hover: #3890fc;
+$gray: #707070;
+$lumi-linear-gradient: linear-gradient(to right, $lumi-green, $lumi-green-darker);
+$lumi-radial-gradient: radial-gradient($lumi-green, $lumi-green-darker);
+
+$primary-color: #fff;
+$primary-color-hover: rgb(146, 146, 146);
+$active-color: $lumi-orange;
+$not-active-color: #a9a9a9;
+
+$contrast-color: #000;
+$background: #393933;
+$background-blur: rgba(57, 57, 51, 0.9);
+$background-darker: #201a1a;
+$background-lighter: #414141;
+$background-card: #52524c;
+$background-card-hover: $background-lighter;
+$background-brigness-lighter: rgba(255, 255, 255, 0.25);
+$background-brigness-lighter2: rgba(255, 255, 255, 0.15);
+$background-brigness-darker: rgba(0, 0, 0, 0.25);
+
+.night-theme {
+    #homesPage {
+        .listhome {
+            .home-image {
+                background: $background-brigness-darker;
+            }
+            .home-info {
+                background-color: #5e5e5e;
+            }
+        }
+        .listhome-search {
+            input {
+                background-color: $background-brigness-lighter;
+            }
+        }
+        .addhome-btn {
+            background-color: $gray;
+        }
+        .configHC,
+        .profile {
+            .goback-btn {
+                background-color: $background-brigness-lighter2;
+                &:hover {
+                    background-color: $background-brigness-lighter;
+                }
+                .tooltip {
+                    background-color: $gray;
+                }
+            }
+            .v-sidebar-menu.vsm_expanded {
+                background: transparent;
+                border-right: solid 1px $primary-color-hover;
+                .vsm--item_open .vsm--link_level-1 {
+                    background-color: transparent;
+                }
+                .vsm--link.vsm--link_level-2 {
+                    &.vsm--link_active {
+                        background-color: $background-lighter !important;
+                        color: $lumi-orange;
+                        // border-left: 3px $lumi-orange solid !important;
+                    }
+                }
+            }
+            .avata {
+                .avata-icon {
+                    background-color: $background-brigness-lighter2;
+                    color: $primary-color;
+                    &:hover {
+                        background-color: $background-brigness-lighter;
+                        color: #eeeeee;
+                    }
+                }
+            }
+        }
+
+    }
+}

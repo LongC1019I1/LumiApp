@@ -1,0 +1,104 @@
+$lumi-orange: #ee9723;
+$lumi-green: #26ac4a;
+$lumi-green-darker: #135625;
+$blue: #008aee;
+$blue-hover: #3890fc;
+$gray: #707070;
+$lumi-linear-gradient: linear-gradient(to right, $lumi-green, $lumi-green-darker);
+$lumi-radial-gradient: radial-gradient($lumi-green, $lumi-green-darker);
+
+$primary-color: #fff;
+$primary-color-hover: rgb(146, 146, 146);
+$active-color: $lumi-orange;
+$not-active-color: #a9a9a9;
+
+$contrast-color: #000;
+$background: #393933;
+$background-blur: rgba(57, 57, 51, 0.9);
+$background-darker: #201a1a;
+$background-lighter: #414141;
+$background-card: #52524c;
+$background-card-hover: $background-lighter;
+$background-brigness-lighter: rgba(255, 255, 255, 0.25);
+$background-brigness-darker: rgba(0, 0, 0, 0.25);
+
+.night-theme {
+    #roomFloor {
+        #floorManager {
+            .buttonAddFloor {
+                background: $gray !important;
+                border: 1px $gray;
+                &:hover {
+                    background-color: $background !important;
+                    border: 1px solid $lumi-orange !important;
+                    color: $lumi-orange;
+                }
+            }
+            h5 {
+                span {
+                    color: $lumi-orange;
+                }
+            }
+            .floor,
+            .room {
+                margin-bottom: 0px !important;
+                background-color: $background;
+                .tooltip-hover {
+                    color: white;
+                    background: gray !important;
+                }
+                &.active {
+                    background-color: $background-darker;
+                    .name {
+                        color: $lumi-orange;
+                    }
+                }
+            }
+        }
+        #roomManager {
+            .card-header {
+                span {
+                    color: $primary-color;
+                }
+                .info-box {
+                    .room-setting {
+                        background-color: $background-brigness-lighter;
+                        .dropdown {
+                            .dropdown-menu {
+                                background-color: $background-darker;
+                                border: 1px solid $not-active-color;
+                                .dropdown-item {
+                                    border-bottom: 1px solid $not-active-color;
+                                    color: $primary-color;
+                                    &:hover {
+                                        background-color: $background-lighter;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .controll-box {
+                    .switch-box {
+                        .switch {
+                            background-color: $not-active-color;
+                            &.active {
+                                background-color: $lumi-orange;
+                            }
+                        }
+                    }
+                }
+                .menu-box {
+                    span.active {
+                        color: $lumi-orange;
+                    }
+                }
+            }
+        }
+        .demo-button {
+            background-color: $gray;
+            border: none;
+            color: $primary-color;
+        }
+    }
+}

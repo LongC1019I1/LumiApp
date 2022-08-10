@@ -1,0 +1,324 @@
+$lumi-orange: #ee9723;
+$lumi-green: #26ac4a;
+$lumi-green-darker: #135625;
+$blue: #008aee;
+$blue-hover: #3890fc;
+$gray: #707070;
+$lumi-linear-gradient: linear-gradient(to right, $lumi-green, $lumi-green-darker);
+$lumi-radial-gradient: radial-gradient($lumi-green, $lumi-green-darker);
+
+$primary-color: #fff;
+$primary-color-hover: rgb(146, 146, 146);
+$active-color: $lumi-orange;
+$not-active-color: #a9a9a9;
+
+$contrast-color: #000;
+$background: #393933;
+$background-blur: rgba(57, 57, 51, 0.9);
+$background-darker: #201a1a;
+$background-lighter: #414141;
+$background-card: #52524c;
+$background-card-hover: $background-lighter;
+$background-brigness-lighter: rgba(255, 255, 255, 0.25);
+$background-brigness-lighter2: rgba(255, 255, 255, 0.15);
+$background-brigness-darker: rgba(0, 0, 0, 0.25);
+
+.night-theme {
+  #secure {
+    #cameraTab {
+      display: flex;
+      .menu-box {
+        width: 400px;
+        max-width: 400px;
+        height: 100%;
+        .menu-header {
+          & > div {
+            background-color: $gray;
+            color: $primary-color-hover;
+            padding: 0.5rem;
+            text-align: center;
+            &:first-child {
+              border-top-left-radius: 1.25rem;
+              border-bottom-left-radius: 1.25rem;
+            }
+            &:last-child {
+              border-top-right-radius: 1.25rem;
+              border-bottom-right-radius: 1.25rem;
+            }
+            &.active {
+              background-color: $background-darker;
+              color: $lumi-orange;
+            }
+          }
+        }
+        .camera {
+          background-color: $background;
+          border-radius: 1.25rem;
+          width: 100%;
+          height: 2.5rem;
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          z-index: 2;
+          .name {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            i {
+              font-size: 1.5rem;
+            }
+          }
+          .option {
+            transition: min-width 0.5s;
+            width: 0rem;
+            min-width: 0rem;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            & > div {
+              // position: relative;
+              min-width: 1.5rem;
+              min-height: 1.5rem;
+              border-radius: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              &:hover {
+                background-color: #4a4a44 !important;
+                .tooltip-hover {
+                  display: block;
+                }
+              }
+              .tooltip-hover {
+                clear: both;
+                position: absolute;
+                top: 2rem;
+                right: 5%;
+                height: 22px;
+                width: max-content;
+                padding: 0 5px;
+                box-sizing: border-box;
+                text-align: center;
+                font-size: 11.5px;
+                border-radius: 6px;
+                line-height: 22px;
+                display: none;
+                z-index: 1000;
+              }
+            }
+          }
+          &:hover {
+            .option {
+              min-width: 3rem;
+            }
+          }
+          .tooltip-hover {
+            color: white;
+            background: gray !important;
+          }
+          &.active {
+            background-color: $background-darker;
+            .name {
+              color: $lumi-orange;
+            }
+            .view-all-icon {
+              color: $lumi-green;
+            }
+          }
+        }
+        .buttonAddCamera {
+          height: 2.5rem;
+          width: 100%;
+          border-radius: 1.25rem;
+          background: $gray !important;
+          border: 1px $gray;
+          &:hover {
+            background-color: $background !important;
+            border: 1px solid $lumi-orange !important;
+            color: $lumi-orange;
+          }
+        }
+      }
+      .info-box {
+        padding-left: 1rem;
+        width: calc(100% - 400px);
+        .form-group {
+          display: flex;
+          align-items: center;
+          label {
+            margin-bottom: 0.25rem;
+            width: 175px;
+            font-size: 18px;
+          }
+          input.form-control {
+            flex: none;
+            padding-left: 1rem;
+            background-color: $background;
+            width: calc(90% - 175px);
+            border: none;
+            font-size: 16px;
+            border-radius: 0.5rem;
+            color: $primary-color;
+            &::placeholder {
+              /* Chrome, Firefox, Opera, Safari 10.1+ */
+              color: $primary-color-hover;
+            }
+          }
+          .input-group-append {
+            z-index: 100;
+            position: relative;
+            .input-group-text {
+              border: none;
+              background-color: transparent;
+              color: $primary-color;
+              position: absolute;
+              right: -0.25rem;
+              top: -1.25rem;
+            }
+          }
+        }
+        .footer-button {
+          background-color: $background-brigness-lighter;
+          border-radius: 1.25rem;
+          border: none;
+          padding: 0.5rem 3rem;
+          &:hover {
+            background-color: $background-brigness-lighter2;
+          }
+        }
+        .camera-info-box {
+          background-color: $background;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.5rem 1rem;
+          border-radius: 0.5rem;
+          .label {
+            width: max-content;
+            margin: 0.5rem;
+          }
+          .info {
+            width: calc(100% - 200px);
+            position: relative;
+            padding-right: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            input {
+              width: 100%;
+              text-align: right;
+              border: none;
+              outline: none;
+              background-color: transparent;
+              color: $primary-color;
+            }
+            .scene-icon {
+              font-size: 2rem;
+            }
+            .dropdown-icon {
+              font-size: 1.5rem;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              right: -1rem;
+            }
+            .switch {
+              vertical-align: middle;
+            }
+          }
+          .dropdown {
+            .dropdown-menu {
+              max-width: 100%;
+            }
+          }
+          .form-group {
+            background-color: $background;
+            border-radius: 1.25rem;
+            outline: none;
+            border: none;
+            color: white;
+            width: 150px;
+          }
+        }
+        #inputIntrusionSetting {
+          .image-box {
+            background-color: $background-darker;
+            background-position: center;
+            background-size: cover;
+          }
+        }
+        .camera-history-input {
+          .date,
+          .time {
+            display: flex;
+            margin-bottom: 1rem;
+            align-items: center;
+            .label {
+              min-width: max-content;
+            }
+            .mx-datepicker,
+            .group-input {
+              width: 150px;
+            }
+            input {
+              width: 150px;
+              background-color: $background;
+              border: none;
+              color: $primary-color;
+              border-radius: 0.5rem;
+              &:focus {
+                box-shadow: none;
+                outline: none;
+              }
+            }
+            i {
+              color: $primary-color;
+            }
+          }
+          @media (max-width: 1399px) {
+            .label {
+              width: 100px;
+            }
+          }
+          @media (min-width: 1400px) {
+            display: flex;
+            .time {
+              margin-left: 2rem;
+            }
+          }
+        }
+      }
+      .VueCarousel {
+        width: 100%;
+        height: 100%;
+        .VueCarousel-wrapper {
+          width: 100%;
+          height: 100%;
+          .VueCarousel-inner {
+            width: 100%;
+            height: 100% !important;
+            .VueCarousel-slide {
+              width: 100%;
+              height: 100%;
+              margin: 0 0 0 0;
+            }
+          }
+        }
+        .VueCarousel-pagination {
+          .VueCarousel-dot-container {
+            margin-top: 0 !important;
+            .VueCarousel-dot {
+              transition: width 0.5s;
+              outline: none;
+              border-radius: 20px;
+              &.VueCarousel-dot--active {
+                width: 30px !important;
+                background-color: $primary-color !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

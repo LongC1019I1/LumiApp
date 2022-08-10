@@ -1,0 +1,177 @@
+$lumi-orange: #ee9723;
+$lumi-green: #26ac4a;
+$lumi-green-darker: #135625;
+$blue: #008aee;
+$blue-hover: #3890fc;
+$gray: #707070;
+$gray2: #5d656b;
+$gray3: #838b91;
+$gray4: #a9aeb2;
+$lumi-linear-gradient: linear-gradient(to right, $lumi-green, $lumi-green-darker);
+$lumi-radial-gradient: radial-gradient($lumi-green, $lumi-green-darker);
+
+$primary-color: #fff;
+$primary-color-hover: rgb(146, 146, 146);
+$active-color: $lumi-orange;
+$not-active-color: #a9a9a9;
+
+$contrast-color: #000;
+$background: #393933;
+$background-blur: rgba(57, 57, 51, 0.9);
+$background-darker: #201a1a;
+$background-lighter: #414141;
+$background-card: #52524c;
+$background-card-condfirm: $gray2;
+$background-card-hover: $background-lighter;
+$background-brigness-lighter: rgba(255, 255, 255, 0.15);
+$background-brigness-lighter2: rgba(255, 255, 255, 0.25);
+$background-brigness-darker: rgba(0, 0, 0, 0.25);
+$background-brigness-darker2: rgba(0, 0, 0, 0.4);
+
+.night-theme {
+    .vue-slider {
+        .vue-slider-rail {
+            cursor: pointer;
+        }
+        &.dimmer-slider {
+            height: 2rem !important;
+            .vue-slider-rail {
+                height: 2rem;
+                .vue-slider-process {
+                    height: 2rem !important;
+                    background-color: $lumi-orange !important;
+                }
+                .vue-slider-dot {
+                    height: 2rem !important;
+                    width: 2rem !important;
+                }
+            }
+        }
+        &.daikin-slider {
+            .vue-slider-rail {
+                background-color: $background;
+                .vue-slider-process {
+                    background-color: $primary-color;
+                }
+                .vue-slider-dot-tooltip-inner {
+                    background-color: transparent;
+                    &:after {
+                        border: none;
+                    }
+                }
+            }
+        }
+        &.music-slider {
+            min-width: 90px;
+            height: 1px !important;
+            .vue-slider-rail {
+                height: 1px;
+                .vue-slider-process {
+                    background-color: white !important;
+                    height: 3px !important;
+                    top: -1px !important;
+                }
+            }
+        }
+        &.speaker-slider {
+            position: relative;
+            left: 1rem;
+            min-width: 70%;
+            height: 1px !important;
+            .vue-slider-rail {
+                height: 1px;
+                .vue-slider-process {
+                    background-color: white !important;
+                    height: 3px !important;
+                    top: -1px !important;
+                }
+            }
+        }
+        &.dimmer-rule-slider {
+            height: 1rem !important;
+            .vue-slider-rail {
+                height: 1rem;
+                .vue-slider-process {
+                    height: 1rem !important;
+                    background-color: $lumi-orange !important;
+                }
+                .vue-slider-dot {
+                    height: 1.2rem !important;
+                    width: 1.2rem !important;
+                }
+                .vue-slider-dot-tooltip-inner {
+                    background-color: transparent;
+                    &:after {
+                        border: none;
+                    }
+                }
+            }
+        }
+        &.curtain-rule-slider,
+        &.daikin-slider2 {
+            height: 0.5rem !important;
+            .vue-slider-rail {
+                height: 0.5rem;
+                .vue-slider-process {
+                    height: 0.5rem !important;
+                    background-color: $lumi-orange !important;
+                }
+                .vue-slider-dot {
+                    height: 1.2rem !important;
+                    width: 1.2rem !important;
+                }
+                .vue-slider-dot-tooltip-inner {
+                    background-color: transparent;
+                    &:after {
+                        border: none;
+                    }
+                }
+            }
+            .vue-slider-mark {
+                top: 40%;
+                .custom-step {
+                    width: 0.7rem;
+                    height: 0.7rem;
+                    border-radius: 50%;
+                    background-color: #fff;
+                }
+                .custom-step.active {
+                    background-color: $lumi-orange;
+                }
+            }
+        }
+        &.camera-slider {
+            height: 0.3rem !important;
+            .vue-slider-rail {
+                height: 0.3rem;
+                background-color: rgba(255, 255, 255, 0.4);
+                .vue-slider-process {
+                    height: 0.3rem !important;
+                    background-color: $primary-color !important;
+                }
+                .vue-slider-dot {
+                    height: .7rem !important;
+                    width: .7rem !important;
+                }
+            }
+        }
+        &.camera-history-slider {
+            height: 0.3rem !important;
+            .vue-slider-rail {
+                height: 0.3rem;
+                background-color: rgba(255, 255, 255, 0.4);
+                .vue-slider-process {
+                    height: 0.3rem !important;
+                    background-color: $lumi-green !important;
+                }
+                .vue-slider-dot {
+                    height: 1rem !important;
+                    width: .3rem !important;
+                    .vue-slider-dot-handle{
+                        border-radius: .15rem;
+                    }
+                }
+            }
+        }
+    }
+}

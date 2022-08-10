@@ -1,0 +1,141 @@
+@import "alert";
+@import "modal";
+@import "select";
+@import "datePicker";
+@import "homes-page";
+@import "pageControll";
+@import "pageRoomfloor";
+@import "pageGroup";
+@import "pageRuleScene";
+@import "vue-slider";
+@import "dropdown";
+@import "header-sidebar";
+@import "custom-element";
+@import "pageSecure";
+@import "cameraTab";
+@import "pageSecure2";
+@import "pageHomeInfo";
+@import "pagePermission";
+@import "formInput";
+@import "pageSchedule";
+
+$lumi-orange: #ee9723;
+$lumi-green: #26ac4a;
+$lumi-green-darker: #135625;
+$blue: #008aee;
+$blue-hover: #3890fc;
+$gray: #707070;
+$lumi-linear-gradient: linear-gradient(to right, $lumi-green, $lumi-green-darker);
+$lumi-radial-gradient: radial-gradient($lumi-green, $lumi-green-darker);
+
+$primary-color: #fff;
+$primary-color-hover: rgb(146, 146, 146);
+$active-color: $lumi-orange;
+$not-active-color: #a9a9a9;
+
+$contrast-color: #000;
+$background: #393933;
+$background-blur: rgba(57, 57, 51, 0.9);
+$background-darker: #201a1a;
+$background-lighter: #414141;
+$background-card: #52524c;
+$background-card-hover: $background-lighter;
+$background-brigness-lighter: rgba(255, 255, 255, 0.25);
+$background-brigness-darker: rgba(0, 0, 0, 0.25);
+$background-brigness-darker: rgba(0, 0, 0, 0.4);
+
+.night-theme {
+    background-color: $background;
+    color: $primary-color;
+    .bg-1 {
+        background-color: $background;
+    }
+    .bg-darker {
+        background-color: $background-darker;
+    }
+    .bg-brigness-darker {
+        background-color: $background-brigness-darker;
+    }
+    .bg-brigness-lighter {
+        background-color: $background-brigness-lighter;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .icon-device-curtain-horizontal-0,
+    .icon-device-curtain-horizontal-1,
+    .icon-device-curtain-horizontal-2,
+    .icon-device-curtain-horizontal-3,
+    .icon-device-curtain-horizontal-4,
+    .icon-device-curtain-horizontal-5,
+    .icon-device-curtain-horizontal-6,
+    .icon-cutain-vertical-0,
+    .icon-cutain-vertical-1,
+    .icon-cutain-vertical-2,
+    .icon-cutain-vertical-3,
+    .icon-cutain-vertical-4,
+    .icon-cutain-vertical-5,
+    .icon-cutain-vertical-6 {
+        color: $primary-color;
+        &::before {
+            color: $primary-color;
+        }
+    }
+    .disabled {
+        opacity: .5;
+        // background-color: $background-brigness-lighter !important;
+        cursor: not-allowed;
+    }
+    .bg-disabled {
+        opacity: .5;
+        // background-color: $background-brigness-lighter !important;
+    }
+    .disabled2 {
+        background-color: $background-brigness-lighter !important;
+        cursor: not-allowed;
+    }
+    .bg-log {
+        background-color: #333940 !important;
+    }
+    .bg-disabled2 {
+        background-color: $background-brigness-lighter !important;
+    }
+    .text-hightlight {
+        color: $primary-color;
+    }
+    select {
+        option {
+            color: $contrast-color;
+        }
+    }
+    .btn-primary {
+        background-color: $blue;
+        &:hover {
+            background-color: $blue-hover;
+        }
+    }
+    .bg-blur {
+        background-color: $background-blur;
+    }
+    .bg-gray-2 {
+        background-color: $gray !important;
+    }
+    .text-error {
+        color: $primary-color !important;
+    }
+    .text-blur {
+        color: $primary-color-hover;
+    }
+    .text-primary-color{
+        color: $primary-color;
+    }
+    .border-none{
+        border: none;
+    }
+    .text-success{
+        color: $lumi-green !important;
+    }
+}

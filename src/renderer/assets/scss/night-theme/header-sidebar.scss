@@ -1,0 +1,108 @@
+$lumi-orange: #ee9723;
+$lumi-green: #26ac4a;
+$lumi-green-darker: #135625;
+$blue: #008aee;
+$blue-hover: #3890fc;
+$gray: #707070;
+$lumi-linear-gradient: linear-gradient(to right, $lumi-green, $lumi-green-darker);
+$lumi-radial-gradient: radial-gradient($lumi-green, $lumi-green-darker);
+
+$primary-color: #fff;
+$primary-color-hover: rgb(146, 146, 146);
+$active-color: $lumi-orange;
+$not-active-color: #a9a9a9;
+
+$contrast-color: #000;
+$background: #393933;
+$background-blur: rgba(57, 57, 51, 0.9);
+$background-darker: #201a1a;
+$background-lighter: #414141;
+$background-card: #52524c;
+$background-card-hover: $background-lighter;
+$background-brigness-lighter: rgba(255, 255, 255, 0.25);
+$background-brigness-darker1: rgba(0, 0, 0, 0.25);
+$background-brigness-darker2: rgba(0, 0, 0, 0.4);
+
+.night-theme {
+    #header {
+        background-image: $lumi-linear-gradient;
+        #notification {
+            .modal-dialog {
+                .modal-content {
+                    background-color: $background-darker !important;
+                    border: 1px solid $not-active-color;
+                    .modal-header {
+                        background: transparent;
+                        span {
+                            color: $lumi-orange;
+                        }
+                        .dropdown {
+                            .dropdown-menu {
+                                background-color: $background-darker;
+                                border: 1px solid $not-active-color;
+                                &:after {
+                                    border-color: $background-darker transparent;
+                                }
+
+                                &:before {
+                                    border-color: $not-active-color transparent;
+                                }
+                                .dropdown-item {
+                                    color: $primary-color;
+                                    &:hover {
+                                        background-color: $background-lighter;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .modal-body {
+                        background: transparent;
+                        .group-notification {
+                            .notification {
+                                &:hover {
+                                    background-color: rgba(0, 0, 0, 0.4) !important;
+                                }
+                                .dot {
+                                    background-color: $lumi-green;
+                                }
+                                .title {
+                                    color: $lumi-orange;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #sidebar {
+        background: $background-darker;
+        .home-name {
+            color: $active-color;
+        }
+        .v-sidebar-menu.vsm_expanded {
+            background-color: transparent;
+            .vsm--item .vsm--link_level-1 {
+                span {
+                    color: #a9a9a9;
+                }
+                background-color: transparent;
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.4) !important;
+                    color: $primary-color;
+                    span {
+                        color: $primary-color;
+                    }
+                }
+                &.vsm--link_active {
+                    span {
+                        color: $active-color;
+                    }
+                    background-color: $background-lighter !important;
+                    color: $active-color;
+                }
+            }
+        }
+    }
+}

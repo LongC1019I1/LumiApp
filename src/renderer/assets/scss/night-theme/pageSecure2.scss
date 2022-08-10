@@ -1,0 +1,169 @@
+$lumi-orange: #ee9723;
+$lumi-green: #26ac4a;
+$lumi-green-darker: #135625;
+$blue: #008aee;
+$blue-hover: #3890fc;
+$gray: #707070;
+$lumi-linear-gradient: linear-gradient(to right, $lumi-green, $lumi-green-darker);
+$lumi-radial-gradient: radial-gradient($lumi-green, $lumi-green-darker);
+
+$primary-color: #fff;
+$primary-color-hover: rgb(146, 146, 146);
+$active-color: $lumi-orange;
+$not-active-color: #a9a9a9;
+
+$contrast-color: #000;
+$background: #393933;
+$background-blur: rgba(57, 57, 51, 0.9);
+$background-darker: #201a1a;
+$background-lighter: #414141;
+$background-card: #52524c;
+$background-card-hover: $background-lighter;
+$background-brigness-lighter: rgba(255, 255, 255, 0.25);
+$background-brigness-lighter2: rgba(255, 255, 255, 0.15);
+$background-brigness-darker: rgba(0, 0, 0, 0.25);
+
+.night-theme {
+  #secure {
+    #cameraTab {
+      .create-pin {
+        width: 60%;
+        margin: auto;
+
+        .btn-default {
+          background: $gray !important;
+          border-color: $gray !important;
+          width: 100%;
+          border-radius: 10px;
+        }
+
+        .form-group {
+          height: 50px;
+          background: $background;
+          border-radius: 10px;
+
+          input.form-control {
+            width: 100% !important;
+            color: #fff;
+            letter-spacing: 15px;
+            padding-bottom: 13px;
+            padding-left: 20px !important;
+            font-size: 40px !important;
+            height: 20px;
+          }
+        }
+
+        .forgot-pin {
+          text-align: center;
+          cursor: pointer;
+          margin-top: 10px;
+          text-decoration: underline;
+        }
+      }
+    }
+
+
+    #deviceSecure {
+      background-color: $background;
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      padding-left: 20px;
+      border-radius: 8px;
+
+
+
+     .payPassword div.sixDigitPassword {
+       top: -43px !important;
+     }
+      .offsecure {
+        .info {
+          padding-top: 5px;
+        }
+        .switch {
+          float: right;
+          margin-right: 20px;
+          margin-top: 2px;
+        }
+      }
+
+      .floorDevice {
+        .switch {
+          float: right;
+          margin-top: 7px;
+        }
+      }
+
+      .device-item {
+        .switch {
+          margin-top: 22px !important;
+        }
+      }
+
+      .listDevices {
+        margin-top: 20px;
+
+        .device {
+          width: 160px;
+          height: 160px;
+          border-radius: 15px;
+          background: $background;
+          margin-right: 20px;
+          margin-bottom: 20px;
+        }
+      }
+
+      .floorDevice {
+        .floor {
+          background: #707070;
+          width: 101%;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+        }
+
+
+
+        .room {
+          background: #707070;
+          width: 101%;
+          margin-top: 10px;
+        }
+
+      }
+
+    }
+
+    #deviceProtected {
+      .card-header {
+        .col-9 {
+          .my-header {
+            border-bottom: 1px solid #ee9723;
+            height: 30px;
+            color: #ee9720;
+            width: 170px;
+          }
+
+        }
+
+        .col-3 {
+          .add-decvice {
+            background-color: #929292;
+            position: relative;
+            width: 30px;
+            height: 30px;
+            margin: 4px 0;
+            border-radius: 50%;
+            float: left;
+            bottom: 5px;
+
+            i {
+              cursor: pointer;position: absolute;left: 5px;top: -1px;font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}

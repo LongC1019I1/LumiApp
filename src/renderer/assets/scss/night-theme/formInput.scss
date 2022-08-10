@@ -1,0 +1,184 @@
+$lumi-orange: #ee9723;
+$lumi-green: #26ac4a;
+$lumi-green-darker: #135625;
+$blue: #008aee;
+$blue-hover: #3890fc;
+$gray: #707070;
+$lumi-linear-gradient: linear-gradient(to right, $lumi-green, $lumi-green-darker);
+$lumi-radial-gradient: radial-gradient($lumi-green, $lumi-green-darker);
+
+$primary-color: #fff;
+$primary-color-hover: rgb(146, 146, 146);
+$active-color: $lumi-orange;
+$not-active-color: #a9a9a9;
+
+$contrast-color: #000;
+$background: #393933;
+$background-blur: rgba(57, 57, 51, 0.9);
+$background-darker: #201a1a;
+$background-lighter: #414141;
+$background-card: #52524c;
+$background-card-hover: $background-lighter;
+$background-brigness-lighter: rgba(255, 255, 255, 0.25);
+$background-brigness-darker1: rgba(0, 0, 0, 0.25);
+$background-brigness-darker2: rgba(0, 0, 0, 0.4);
+
+.night-theme {
+    .account-input,
+    .lumi-input {
+        input[type="checkbox"]:focus {
+            & ~ label::before {
+                box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.035), 0 0 8px rgba(255, 255, 255, 0.6);
+            }
+        }
+        button,
+        .form-control,
+        .form-info,
+        .vs__dropdown-toggle {
+            height: 55px;
+            font-size: 1.115rem;
+            border-radius: 1rem;
+            .vs__selected {
+                margin: 0 auto;
+                padding: 0 auto;
+            }
+        }
+        .form-info {
+            display: flex;
+            align-items: center;
+            padding-left: 0.8rem;
+        }
+        .form-group,
+        .v-select {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 1rem;
+            .form-control,
+            .input-group-text,
+            .vs__dropdown-toggle {
+                border: none;
+                border-radius: 1rem;
+            }
+            .input-group-append {
+                display: none;
+            }
+            &:focus-within,
+            &:focus {
+                .input-group-append {
+                    display: inherit;
+                }
+            }
+        }
+        .custom-control-label {
+            &::before {
+                top: 0.285rem;
+                height: 1rem;
+                width: 1rem;
+            }
+            &::after {
+                top: 0.285rem;
+                height: 1rem;
+                width: 1rem;
+            }
+        }
+        .custom-control-input:checked ~ .custom-control-label::before {
+            border: 1px solid #2774d8;
+        }
+        .custom-control-label::before {
+            background-color: transparent;
+            border: 2px solid #2774d8;
+        }
+
+        .form-control,
+        .vti__dropdown,
+        .input-group-text {
+            border: none;
+            border-radius: 1rem;
+        }
+        .input-group-prepend {
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        }
+        .input-group-append {
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+        .vti__dropdown {
+            &:hover {
+                background-color: transparent;
+            }
+            &.open {
+                background-color: transparent;
+            }
+            &:focus {
+                outline: none;
+            }
+            .vti__dropdown-list {
+                min-height: 400px;
+                width: 550px;
+                &.above {
+                    top: -388px;
+                }
+                &.below {
+                    top: 55px;
+                }
+                color: #000;
+                &::-webkit-scrollbar-track {
+                    background: rgba(200, 200, 200, 0.5);
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: rgba(100, 100, 100, 0.8);
+                }
+                &::-webkit-scrollbar-thumb:hover {
+                    background: rgba(0, 0, 0, 0.8);
+                }
+                .vti__dropdown-item {
+                    padding: 0.5rem 1rem;
+                    border-bottom: solid 0.5px gray;
+                }
+            }
+        }
+    }
+    .lumi-input2 {
+        select {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+
+            background-image: linear-gradient(45deg, transparent 50%, #fff 50%),
+                linear-gradient(135deg, #fff 50%, transparent 50%), linear-gradient(to right, #fff, #fff);
+            background-position: calc(100% - 15px) calc(1em + 2px), calc(100% - 8px) calc(1em + 2px),
+                calc(100% - 2.5em) 0.5em;
+            background-size: 8px 8px, 8px 8px, 0px 0em;
+            background-repeat: no-repeat;
+        }
+        .form-control,
+        .form-info {
+            height: auto;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+        }
+        .form-info {
+            display: flex;
+            align-items: center;
+            padding-left: 0.8rem;
+        }
+        .form-group {
+            // border: 1px solid #2774d8;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 0.7rem;
+            .form-control,
+            .input-group-text {
+                border: none;
+                border-radius: 0.5rem;
+            }
+            .input-group-prepend,
+            .input-group-append {
+                border-radius: 0.5rem;
+            }
+        }
+    }
+}

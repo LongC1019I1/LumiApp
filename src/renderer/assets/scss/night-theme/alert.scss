@@ -1,0 +1,105 @@
+$lumi-orange: #ee9723;
+$lumi-green: #26ac4a;
+$lumi-green-darker: #135625;
+$blue: #008aee;
+$blue-hover: #3890fc;
+$gray: #707070;
+$gray2: #5d656b;
+$lumi-linear-gradient: linear-gradient(to right, $lumi-green, $lumi-green-darker);
+$lumi-radial-gradient: radial-gradient($lumi-green, $lumi-green-darker);
+
+$primary-color: #fff;
+$primary-color-hover: rgb(146, 146, 146);
+$active-color: $lumi-orange;
+$not-active-color: #a9a9a9;
+
+$contrast-color: #000;
+$background: #393933;
+$background-blur: rgba(57, 57, 51, 0.9);
+$background-darker: #201a1a;
+$background-lighter: #414141;
+$background-card: #52524c;
+$background-card-condfirm: $gray2;
+$background-card-hover: $background-lighter;
+$background-brigness-lighter: rgba(255, 255, 255, 0.25);
+$background-brigness-darker: rgba(0, 0, 0, 0.25);
+
+.night-theme {
+    &.swal2-popup {
+        background-color: $background-card-condfirm;
+        padding: 2rem 0 0 0;
+        &.night-theme-input {
+            background-color: $background-card;
+        }
+    }
+    &.swal2-popup.swal2-toast {
+        background-color: $background-card-condfirm;
+        color: $primary-color;
+        justify-content:baseline;
+        box-shadow: none;
+        border-radius: 1rem;
+        .swal2-header{
+            margin: .5rem;
+        }
+        .swal2-title{
+            color: $primary-color;
+        }
+        .swal2-content{
+            color: $primary-color;
+            font-size: 1.125rem;
+        }
+    }
+    .swal2-content {
+        color: #fff;
+        padding: 1rem 3rem;
+        input {
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            background-color: $background;
+            border: none;
+            color: $primary-color;
+            position: relative;
+            outline: none;
+            &:focus {
+                box-shadow: none;
+            }
+            &::placeholder {
+                /* Chrome, Firefox, Opera, Safari 10.1+ */
+                opacity: 0.6; /* Firefox */
+            }
+        }
+        .swal2-checkbox{
+            background-color: transparent;
+            input[type="checkbox"]:focus {
+                & ~ label::before {
+                    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.035), 0 0 8px rgba(255, 255, 255, 0.6);
+                }
+            }
+        }
+    }
+    .swal2-title {
+        // font-weight: bolder !important;
+    }
+    .swal2-actions {
+        button {
+            flex-grow: 1;
+            max-width: 100%;
+            min-width: 50%;
+            padding: 1rem 0px;
+            margin: 0px;
+            border-top: 1px white solid;
+            background-color: transparent;
+            border-radius: 0px;
+            &.swal2-cancel {
+                border-left: 1px white solid !important;
+            }
+            &:focus {
+                box-shadow: none;
+            }
+            &:hover {
+                border-top: 1px white solid;
+                background-color: transparent;
+            }
+        }
+    }
+}

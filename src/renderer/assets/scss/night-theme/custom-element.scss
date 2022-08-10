@@ -1,0 +1,253 @@
+$lumi-orange: #ee9723;
+$lumi-green: #26ac4a;
+$lumi-green-darker: #135625;
+$blue: #008aee;
+$blue-hover: #3890fc;
+$gray: #707070;
+$lumi-linear-gradient: linear-gradient(to right, $lumi-green, $lumi-green-darker);
+$lumi-radial-gradient: radial-gradient($lumi-green, $lumi-green-darker);
+
+$primary-color: #fff;
+$primary-color-hover: rgb(146, 146, 146);
+$active-color: $lumi-orange;
+$not-active-color: #a9a9a9;
+
+$contrast-color: #000;
+$background: #393933;
+$background-blur: rgba(57, 57, 51, 0.9);
+$background-darker: #201a1a;
+$background-lighter: #414141;
+$background-card: #52524c;
+$background-card-hover: $background-lighter;
+$background-brigness-lighter: rgba(255, 255, 255, 0.25);
+$background-brigness-darker1: rgba(0, 0, 0, 0.25);
+$background-brigness-darker2: rgba(0, 0, 0, 0.4);
+
+.night-theme {
+    .dropdown{
+        cursor: pointer;
+    }
+    .card {
+        background-color: $background-card;
+        .card-header {
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            background-color: transparent;
+            border: none;
+            span {
+                color: $not-active-color;
+                &.title {
+                    color: $active-color;
+                }
+                &.active {
+                    color: $active-color;
+                    border-bottom: 1px solid $active-color;
+                }
+            }
+        }
+        border: none;
+        &.open-tab {
+            .card-header {
+                background-color: $primary-color-hover;
+                span {
+                    color: $primary-color;
+                }
+            }
+        }
+        .card-footer {
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            background-color: transparent;
+            border: none;
+        }
+    }
+    .account-input,
+    .lumi-input {
+        .form-group {
+            border: 1px solid transparent;
+            background-color: $background-brigness-darker2;
+            .form-control,
+            .input-group-text {
+                color: $primary-color;
+                background-color: transparent;
+            }
+        }
+        button,
+        .form-group {
+            &:focus,
+            &:focus-within {
+                box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.035), 0 0 8px rgba(255, 255, 255, 0.6);
+            }
+        }
+        .vti__dropdown {
+            &:hover {
+                background-color: transparent;
+            }
+
+            &.open {
+                background-color: transparent;
+            }
+            .vti__country-code {
+                color: $primary-color;
+            }
+        }
+
+        .form-control,
+        .vti__dropdown,
+        .input-group-text {
+            border: none;
+            color: $primary-color;
+        }
+    }
+    .lumi-input2 {
+        .form-group {
+            border: none;
+            background-color: $background;
+            .form-control,
+            .input-group-text {
+                color: $primary-color;
+                background-color: transparent;
+            }
+        }
+        .vti__dropdown {
+            &:hover {
+                background-color: transparent;
+            }
+
+            &.open {
+                background-color: transparent;
+            }
+            .vti__country-code {
+                color: $primary-color;
+            }
+        }
+
+        .form-control,
+        .vti__dropdown,
+        .input-group-text {
+            border: none;
+            color: $primary-color;
+        }
+    }
+    .switch {
+        .slider {
+            background-color: $background-darker;
+            &.disabled {
+                background-color: $gray !important;
+                &::before {
+                    background-color: $gray2;
+                }
+            }
+        }
+        &.checked .slider {
+            background-color: $lumi-green !important;
+            &.disabled {
+                background-color: $gray !important;
+                &::before {
+                    background-color: $gray2;
+                }
+            }
+        }
+    }
+    .v-context.device-context-menu {
+        background-color: $background-darker;
+        border: 1px solid $not-active-color;
+        li {
+            a {
+                color: $primary-color;
+                &:hover {
+                    background-color: $background-lighter;
+                }
+            }
+            &:not(:last-child) {
+                border-bottom: 1px solid $not-active-color;
+            }
+        }
+    }
+    .loading-dots {
+        display: inline;
+        &--dot {
+            animation: dot-keyframes 2s infinite ease-in-out;
+            background-color: $primary-color;
+            border-radius: 10px;
+            display: inline-block;
+            height: 10px;
+            width: 10px;
+    
+            &:nth-child(2) {
+                animation-delay: 0.5s;
+            }
+    
+            &:nth-child(3) {
+                animation-delay: 1s;
+            }
+            &:nth-child(4) {
+                animation-delay: 1.5s;
+            }
+        }
+    }
+    .select-header {
+        span {
+            &.active {
+                color: $lumi-orange;
+                border-bottom: 1px solid $lumi-orange;
+            }
+        }
+    }
+    #homeControl,
+    #roomFloor,
+    #rule, 
+    .modal-switch-camera {
+        .scene-item {
+            .alert {
+                background-color: $background;
+            }
+            &.active {
+                .alert {
+                    background-color: $lumi-green;
+                }
+            }
+        }
+        .device-item {
+            // background-color: $background;
+            .fake-box {
+                background-color: $background;
+                .icon {
+                    i:before {
+                        color: $primary-color !important;
+                    }
+                }
+            }
+            &.active {
+                .fake-box {
+                    background-size: 150% 150%;
+                    background-position: 100% 100%;
+                    background-image: $lumi-radial-gradient;
+                }
+            }
+            &.shortcut,
+            &.choosed {
+                .fake-box {
+                    background-color: $gray;
+                }
+                .status > div {
+                    background-color: white;
+                    i {
+                        color: $lumi-green-darker;
+                    }
+                }
+            }
+        }
+    }
+    .modal-choose-scene {
+        .scene-item {
+            min-width: 50%;
+            max-width: 50%;
+        }
+    }
+    .modal-learning-command {
+        .spinner {
+          font-size: 2rem;
+        }
+      }
+}

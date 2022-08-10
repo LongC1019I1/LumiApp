@@ -1,0 +1,214 @@
+$lumi-orange: #ee9723;
+$lumi-green: #26ac4a;
+$lumi-green-darker: #135625;
+$blue: #008aee;
+$blue-hover: #3890fc;
+$lumi-linear-gradient: linear-gradient(to right, $lumi-green, $lumi-green-darker);
+$lumi-radial-gradient: radial-gradient($lumi-green, $lumi-green-darker);
+
+$primary-color: #fff;
+$primary-color-hover: rgb(146, 146, 146);
+$active-color: $lumi-orange;
+
+$contrast-color: #000;
+$background: #393933;
+$background-blur: rgba(57, 57, 51, 0.9);
+$background-card: #52524c;
+$background-darker: #201a1a;
+$background-lighter: #414141;
+$background-brigness-lighter: rgba(255, 255, 255, 0.25);
+$background-brigness-darker: rgba(0, 0, 0, 0.25);
+$hoverbackground: #5b5f60;
+$hover: #707070;
+$hovericon: #4a4a44;
+$textIconDevice: #a9a9a9;
+$grayDevice: #848484;
+
+.night-theme {
+
+  .modal-dialog {
+
+    .modal-content {
+      background-color: $hovericon !important;
+      box-shadow: none !important;
+
+      .modal-content {
+        box-shadow: none !important;
+      }
+
+      .modal-tiltle {
+        //         }
+
+        span {
+          color: white !important;
+        }
+      }
+    }
+  }
+
+  #DeviceList {
+
+
+    .addDevice button {
+      background-color: $grayDevice;
+    }
+
+    #SelectFloor {
+
+      .dropdown-toggle {
+        background-color: $hover;
+      }
+
+      .dropdown-menu {
+        background-color: #201a1a !important;
+
+        a:hover {
+          background-color: #201a1a !important;
+        }
+      }
+    }
+
+    #searchFillterDevices {
+      .search {
+        position: relative;
+
+        .form-group {
+          float: left;
+          margin-left: 5%;
+          width: 95%;
+
+          input {
+            border-radius: 20px;
+            border: none;
+            padding-left: 3.5em;
+            color: white;
+            height: 43px;
+            background-color: $hover;
+          }
+        }
+
+        i {
+          position: absolute;
+          left: 4%;
+          top: 0;
+          font-size: 28px;
+          margin-left: 15px;
+        }
+      }
+
+      .filter-device {
+        i {
+          font-size: 44px;
+          margin-left: 15px;
+          position: relative;
+          top: -14px;
+        }
+
+        ul {
+          position: relative;
+          top: -43px;
+          left: -193px;
+          background: #201a1a;
+          width: 250px;
+
+          a {
+            color: white;
+            border-bottom: 1px solid white;
+          }
+
+          a:last-child {
+            color: white;
+            border-bottom: none;
+          }
+
+          a:hover {
+            background: #201a1a;
+          }
+        }
+      }
+    }
+
+    #tableDevice {
+
+      table {
+        tr:first-child {
+          th {
+            background-color: $grayDevice;
+          }
+
+          .custom-control {
+            .custom-control-label::after {
+              background-color: #848483;
+            }
+          }
+        }
+
+        tr {
+          td {
+
+            background: $hovericon;
+
+            .custom-control {
+              .custom-control-label::after {
+                background-color: $hovericon !important;;
+              }
+            }
+
+            .check_device {
+              background-color: $hovericon !important;
+            }
+
+          }
+        }
+
+      }
+    }
+
+  }
+
+  #ModalDeviceIn {
+    .input-device-error {
+      color: #F63737!important;
+    }
+  }
+
+  #ModalDeviceIr {
+    .device-ir {
+      background: $hover;
+    }
+
+    .device-ir:hover {
+      background: $textIconDevice;
+
+    }
+
+    .input-device-error {
+      color: #F63737!important;
+    }
+
+  }
+
+  #ModalDeviceIrv2 {
+
+    .select-remote {
+      background: $hover;
+      color: #e7e7e7;
+    }
+
+
+    .list-device-library {
+      background-color: #201a1a;
+      .dropdown-item {
+        color: white;
+      }
+
+      .dropdown-item:hover {
+        background-color: #201a1a;
+      }
+    }
+  }
+
+
+
+
+}

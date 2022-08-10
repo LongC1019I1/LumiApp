@@ -1,0 +1,468 @@
+$lumi-orange: #ee9723;
+$lumi-green: #26ac4a;
+$lumi-green-darker: #135625;
+$blue: #008aee;
+$blue-hover: #3890fc;
+$gray: #707070;
+$gray2: #5d656b;
+$gray3: #838b91;
+$gray4: #a9aeb2;
+$lumi-linear-gradient: linear-gradient(to right, $lumi-green, $lumi-green-darker);
+$lumi-radial-gradient: radial-gradient($lumi-green, $lumi-green-darker);
+
+$primary-color: #fff;
+$primary-color-hover: rgb(146, 146, 146);
+$active-color: $lumi-orange;
+$not-active-color: #a9a9a9;
+
+$contrast-color: #000;
+$background: #393933;
+$background-blur: rgba(57, 57, 51, 0.9);
+$background-darker: #201a1a;
+$background-lighter: #414141;
+$background-card: #52524c;
+$background-card-condfirm: $gray2;
+$background-card-hover: $background-lighter;
+$background-brigness-lighter: rgba(255, 255, 255, 0.15);
+$background-brigness-lighter2: rgba(255, 255, 255, 0.25);
+$background-brigness-darker: rgba(0, 0, 0, 0.25);
+$background-brigness-darker2: rgba(0, 0, 0, 0.4);
+
+.night-theme {
+    .modal-xlg {
+        min-width: 1024px;
+    }
+    .modal {
+        background-color: $background-brigness-darker2;
+        .modal-content {
+            .modal-header {
+                .close > span:not(.sr-only) {
+                    font-size: 2rem;
+                    color: $primary-color;
+                }
+                background-color: $gray;
+            }
+            .modal-body {
+                border-bottom-left-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+            }
+        }
+        .modal-dialog.modal-confirm {
+            .modal-content {
+                background-color: $gray2 !important;
+            }
+            .modal-footer {
+                button {
+                    background-color: transparent !important;
+                    &:hover {
+                        background-color: $background-card-hover !important;
+                    }
+                }
+            }
+        }
+        .modal-dialog.modal-input {
+            .modal-content {
+                background-color: $background-card;
+            }
+        }
+        .modal-controll {
+            .modal-content {
+                background-color: transparent !important;
+            }
+            .modal-body {
+                background-color: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(20px);
+            }
+        }
+        .modal-controll,
+        .modal-device-input,
+        .modal-device-output {
+            .modal-body {
+                .device-icon {
+                    i:before {
+                        color: $primary-color;
+                    }
+                }
+                .controll-form {
+                    .controll-curtain-menu,
+                    .controll-fan-menu {
+                        div {
+                            background-color: $background-brigness-lighter;
+                            &.active {
+                                background-color: $lumi-orange;
+                            }
+                        }
+                    }
+                    .controll-remote-air-v1 {
+                        .on-off-controll {
+                            div {
+                                background-color: $background-brigness-lighter;
+                                &.has-command {
+                                    background-color: $gray3;
+                                }
+                            }
+                        }
+                        .command-controll {
+                            div.command-item .fake-box {
+                                background-color: $gray3;
+                                &.add-command {
+                                    background-color: $background-brigness-lighter;
+                                }
+                            }
+                        }
+                        .btn-controll {
+                            div {
+                                background-color: $background-brigness-darker;
+                            }
+                        }
+                    }
+                    .controll-remote-air-v2 {
+                        & > div {
+                            & > div {
+                                background-color: $gray3;
+                                & > div:active {
+                                    background-color: $gray4;
+                                }
+                            }
+                        }
+                    }
+                    &.controll-remote-fan-v1 {
+                        & > div {
+                            & > div {
+                                color: $primary-color;
+                                .power-button {
+                                    background-color: $background-brigness-lighter;
+                                    &.has-command {
+                                        background-color: rgb(255, 46, 46);
+                                        &:active {
+                                            background-color: rgb(255, 120, 120);
+                                        }
+                                    }
+                                    &:active {
+                                        background-color: $gray4;
+                                    }
+                                }
+                                & > div {
+                                    &.has-command {
+                                        background-color: $gray3;
+                                    }
+                                    background-color: $background-brigness-lighter;
+                                    &:active {
+                                        background-color: $gray4;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.controll-remote-fan-v2 {
+                        & > div {
+                            & > div {
+                                color: $primary-color;
+                                &.power-button {
+                                    & > div {
+                                        background-color: rgb(255, 46, 46);
+                                        &:active {
+                                            background-color: $background-brigness-lighter;
+                                        }
+                                    }
+                                }
+                                & > div {
+                                    background-color: $gray3;
+                                    &:active {
+                                        background-color: $gray4;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.controll-remote-tv-v1 {
+                        & > div {
+                            & > div {
+                                background-color: $background-brigness-lighter;
+                                &.has-command {
+                                    background-color: $gray3;
+                                }
+                                &.power-button {
+                                    background-color: $background-brigness-lighter;
+                                    &.has-command {
+                                        background-color: rgb(255, 70, 70);
+                                    }
+                                    &:active {
+                                        background-color: rgb(255, 150, 150);
+                                    }
+                                }
+                                &:active {
+                                    background-color: $gray4;
+                                }
+                                &.center-controll,
+                                &.vol-controll,
+                                &.ch-controll {
+                                    background-color: transparent;
+                                    &.has-command {
+                                        background-color: transparent;
+                                        &:active {
+                                            background-color: transparent;
+                                        }
+                                    }
+                                    &:active {
+                                        background-color: transparent;
+                                    }
+                                    & > div {
+                                        background-color: $background-brigness-lighter;
+                                        &.has-command {
+                                            background-color: $gray3;
+                                        }
+                                        &:active {
+                                            background-color: $gray4;
+                                        }
+                                    }
+                                }
+                                &.center-controll {
+                                    background-color: transparent;
+                                    &:active {
+                                        background: transparent;
+                                    }
+                                    .center-button {
+                                        background-color: $background-brigness-lighter;
+                                        &.has-command {
+                                            background-color: $gray3;
+                                        }
+                                    }
+                                    .button {
+                                        background-color: $background-brigness-lighter;
+                                        &.has-command {
+                                            background-color: $gray3;
+                                        }
+                                    }
+                                    .center-blur {
+                                        &:active {
+                                            background: $gray;
+                                        }
+                                        background: $gray;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.controll-remote-tv-v2,
+                    &.controll-remote-stb-v2 {
+                        & > div {
+                            & > div {
+                                background-color: $gray3;
+                                &.power-button {
+                                    background-color: rgb(255, 70, 70);
+                                    &:active {
+                                        background-color: rgb(255, 150, 150);
+                                    }
+                                }
+                                &:active {
+                                    background-color: $gray4;
+                                }
+                                &.center-controll,
+                                &.vol-controll,
+                                &.ch-controll {
+                                    background-color: transparent;
+                                    &:active {
+                                        background-color: transparent;
+                                    }
+                                    & > div {
+                                        background-color: $gray3;
+                                        &:active {
+                                            background-color: $gray4;
+                                        }
+                                    }
+                                }
+                                &.center-controll {
+                                    background-color: transparent;
+                                    .center-button {
+                                        background: $gray3;
+                                    }
+                                    .button {
+                                        background: $gray3;
+                                    }
+                                    .center-blur {
+                                        background: $gray;
+                                        &:active {
+                                            background: $gray;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.controll-daikin {
+                        .button-daikin {
+                            & > div {
+                                & > div {
+                                    background-color: $gray3;
+                                    &:active {
+                                        background-color: $gray4;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .info-box {
+                    background-color: $background-brigness-darker;
+                    color: $primary-color-hover;
+                    &.active {
+                        color: $primary-color;
+                        background-color: $background-brigness-lighter;
+                    }
+                }
+            }
+        }
+        .modal-input,
+        .modal-confirm {
+            .modal-content {
+                .modal-body {
+                    .form-group.input-group {
+                        .input-group-prepend,
+                        .input-group-append {
+                            .input-group-text {
+                                border: none;
+                                background-color: $background;
+                            }
+                        }
+                        background-color: $background;
+                    }
+                    input {
+                        background-color: $background;
+                        border: none;
+                        color: $primary-color;
+                        position: relative;
+                        &.custom-control-input:checked ~ .custom-control-label::before {
+                            background-color: $primary-color;
+                            border-color: $gray;
+                        }
+
+                        &.custom-control-input:checked ~ .custom-control-label::after {
+                            position: absolute;
+                            left: -22px;
+                            border-bottom: 2px solid $gray;
+                            border-right: 2px solid $gray;
+                            width: 8px;
+                            height: 16px;
+                            background-color: transparent;
+                            -webkit-transform: rotate(45deg);
+                            -moz-transform: rotate(45deg);
+                            -o-transform: rotate(45deg);
+                            -ms-transform: rotate(45deg);
+                            transform: rotate(45deg);
+                        }
+                    }
+                    button {
+                        background-color: $gray;
+                        border: none;
+                    }
+                    .checkbox {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        i {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+                .modal-footer {
+                    button {
+                        height: auto !important;
+                        border: none !important;
+                        box-shadow: none !important;
+                        flex-grow: 1;
+                        max-width: 100%;
+                        min-width: 50%;
+                        padding: 1rem 0px !important;
+                        margin: 0px !important;
+                        // border-top: 1px white solid;
+                        background-color: transparent !important;
+                        border-radius: 0px !important;
+                        &:not(:last-child) {
+                            border-right: 1px white solid !important;
+                        }
+                        &:last-child {
+                            border-bottom-right-radius: 1rem !important;
+                        }
+                        &:first-child {
+                            border-bottom-left-radius: 1rem !important;
+                        }
+                        &:focus {
+                            box-shadow: none !important;
+                        }
+                        &:hover {
+                            background-color: $background-brigness-lighter !important;
+                        }
+                        &:disabled {
+                            background-color: $gray3 !important;
+                        }
+                    }
+                }
+            }
+        }
+        .modal-device-info {
+            .modal-body {
+                .device-info {
+                    &:not(:last-child) {
+                        border-bottom: 1px solid $primary-color-hover;
+                    }
+                }
+            }
+        }
+        .modal-device-input,
+        .modal-device-output {
+            .device-status {
+                align-items: center;
+                i {
+                    font-size: 5rem;
+                }
+                .fan-number {
+                    display: flex;
+                    & > div {
+                        width: 20%;
+                        height: 2.5rem;
+                        text-align: center;
+                        background-color: $gray;
+                        margin: 0.1rem;
+                        vertical-align: middle;
+                        line-height: 2.5rem;
+                        &.active {
+                            background-color: $lumi-orange;
+                        }
+                        &:first-child {
+                            border-top-left-radius: 1.25rem;
+                            border-bottom-left-radius: 1.25rem;
+                        }
+                        &:last-child {
+                            border-top-right-radius: 1.25rem;
+                            border-bottom-right-radius: 1.25rem;
+                        }
+                    }
+                }
+            }
+            .form-group {
+                border-radius: 0.5rem !important;
+                .input-group-text {
+                    border-top-right-radius: 0.5rem !important;
+                    border-bottom-right-radius: 0.5rem !important;
+                    i {
+                        margin: 0 1rem;
+                    }
+                }
+            }
+        }
+    }
+    .modal-camera {
+        min-width: 70%;
+        .modal-body {
+            border-radius: 1rem;
+        }
+    }
+    .fixed-modal-camera {
+        min-width: 30%;
+        max-width: 30%;
+        .modal-body {
+            border-radius: 1rem;
+        }
+    }
+}
